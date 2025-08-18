@@ -1,0 +1,52 @@
+{
+  "mappings": {
+    "net/fIrepdx/bbclient/mixin/ClientTickMixin": {
+      "tick": "Lnet/minecraft/class_310;method_1574()V"
+    },
+    "net/fIrepdx/bbclient/mixin/GameClientMixin": {
+      "currentFps": "field_1738:I"
+    },
+    "net/fIrepdx/bbclient/mixin/GameInfoMixin": {
+      "<init>(Lnet/minecraft/client/MinecraftClient;)V": "Lnet/minecraft/class_329;<init>(Lnet/minecraft/class_310;)V",
+      "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_332;F)V"
+    },
+    "net/fIrepdx/bbclient/mixin/InGameHudMixin": {
+      "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_332;F)V"
+    },
+    "net/fIrepdx/bbclient/mixin/InGameMenuMixin": {
+      "initWidgets": "Lnet/minecraft/class_433;method_20543()V"
+    },
+    "net/fIrepdx/bbclient/mixin/MinecraftClientMixin": {
+      "run": "Lnet/minecraft/class_310;method_1514()V"
+    },
+    "net/fIrepdx/bbclient/mixin/TitleScreenMixin": {
+      "init": "Lnet/minecraft/class_442;method_25426()V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/fIrepdx/bbclient/mixin/ClientTickMixin": {
+        "tick": "Lnet/minecraft/class_310;method_1574()V"
+      },
+      "net/fIrepdx/bbclient/mixin/GameClientMixin": {
+        "currentFps": "field_1738:I"
+      },
+      "net/fIrepdx/bbclient/mixin/GameInfoMixin": {
+        "<init>(Lnet/minecraft/client/MinecraftClient;)V": "Lnet/minecraft/class_329;<init>(Lnet/minecraft/class_310;)V",
+        "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_332;F)V"
+      },
+      "net/fIrepdx/bbclient/mixin/InGameHudMixin": {
+        "render": "Lnet/minecraft/class_329;method_1753(Lnet/minecraft/class_332;F)V"
+      },
+      "net/fIrepdx/bbclient/mixin/InGameMenuMixin": {
+        "initWidgets": "Lnet/minecraft/class_433;method_20543()V"
+      },
+      "net/fIrepdx/bbclient/mixin/MinecraftClientMixin": {
+        "run": "Lnet/minecraft/class_310;method_1514()V"
+      },
+      "net/fIrepdx/bbclient/mixin/TitleScreenMixin": {
+        "init": "Lnet/minecraft/class_442;method_25426()V"
+      }
+    }
+  }
+}

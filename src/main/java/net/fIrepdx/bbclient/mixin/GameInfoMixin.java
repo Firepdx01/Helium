@@ -1,0 +1,39 @@
+package net.fIrepdx.bbclient.mixin;
+
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fIrepdx.bbclient.hud.GameInfoHud;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.DrawContext;
+import net.minecraft.client.gui.hud.InGameHud;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+@Environment(EnvType.CLIENT)
+@Mixin(value = InGameHud.class)
+public abstract class GameInfoMixin {
+    private GameInfoHud hudInfo;
+
+    @Shadow
+    @Final
+    private MinecraftClient client;
+
+    @Inject(method = "<init>(Lnet/minecraft/client/MinecraftClient;)V", at = @At(value = "RETURN"))
+    private void onInit(MinecraftClient client, CallbackInfo ci) {
+        // Start Mixin
+        System.out.println("Init Coordinates Mixin");
+        this.hudInfo = new GameInfoHud(client);
+    }
+
+    @Inject(method = "render", at = @At("HEAD"))
+    private void onDraw(DrawContext context, float esp, CallbackInfo ci) {
+        if (!this.client.inGameHud.getDebugHud().shouldShowDebugHud()) {
+            // Draw Game info on every GameHud render
+            this.hudInfo.draw(context);
+        }
+    }
+}

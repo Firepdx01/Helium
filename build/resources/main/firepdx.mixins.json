@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "net.fIrepdx.bbclient.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "GameClientMixin",
+    "GameInfoMixin",
+    "MinecraftClientMixin",
+    "InGameHudMixin",
+    "ClientTickMixin",
+    "TitleScreenMixin",
+    "InGameMenuMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

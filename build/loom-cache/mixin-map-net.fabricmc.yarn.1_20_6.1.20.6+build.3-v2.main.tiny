@@ -1,0 +1,2 @@
+v1	named	intermediary
+FIELD	net/fIrepdx/bbclient/mixin/GameInfoMixin	Lnet/minecraft/client/MinecraftClient;	client	field_2035
