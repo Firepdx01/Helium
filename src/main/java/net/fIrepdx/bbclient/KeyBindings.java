@@ -8,12 +8,12 @@ import org.lwjgl.glfw.GLFW;
 public class KeyBindings {
     public static KeyBinding openGui;
 
-    public static void register() {
+    public static void init() {
         openGui = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.simple_utilities.open_gui",
+                "key.bbclient.opengui",
                 InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_U, // default key: U
-                "category.simple_utilities"
+                GLFW.GLFW_KEY_RIGHT_SHIFT, // Right Shift default
+                "category.bbclient"
         ));
     }
 }

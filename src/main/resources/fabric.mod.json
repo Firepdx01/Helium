@@ -13,7 +13,7 @@
     "issues": "https://github.com/johnvictorfs/simple-utilities-mod/issues"
   },
   "license": "MIT",
-  "icon": "assets/bb_client/logo.ico",
+  "icon": "assets/bb_client/logo.png",
   "environment": "*",
   "entrypoints": {
     "client": [

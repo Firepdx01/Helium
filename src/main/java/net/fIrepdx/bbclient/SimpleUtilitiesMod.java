@@ -8,13 +8,14 @@ import net.minecraft.client.MinecraftClient;
 
 public class SimpleUtilitiesMod implements ClientModInitializer {
     public static final String MODID = "simple_utilities";
+    private static double oldGamma = 1.0;
 
     @Override
     public void onInitializeClient() {
         // Initialize configs, keybinds, and HUD renderer
         ConfigManager.init();
-        KeyBindings.register(); // <-- fixed, was KeyBindings.init()
-        HudRenderer.init();
+        KeyBindings.init();  // ✅ fixed
+        HudRenderer.init();  // safe to keep (even if empty right now)
 
         // Handle key presses and features each client tick
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
@@ -23,11 +24,16 @@ public class SimpleUtilitiesMod implements ClientModInitializer {
                 client.setScreen(new ClientMenuScreen());
             }
 
-            // Apply Fullbright if enabled
+            // Apply Fullbright toggle
             if (ConfigManager.isEnabled(Module.FULLBRIGHT)) {
-                client.options.getGamma().setValue(16.0); // max gamma
+                if (client.options.getGamma().getValue() != 16.0) {
+                    oldGamma = client.options.getGamma().getValue();
+                    client.options.getGamma().setValue(16.0); // max gamma
+                }
             } else {
-                client.options.getGamma().setValue(1.0); // default
+                if (client.options.getGamma().getValue() == 16.0) {
+                    client.options.getGamma().setValue(oldGamma); // restore previous gamma
+                }
             }
         });
     }

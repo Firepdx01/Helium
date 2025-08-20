@@ -4,9 +4,10 @@
     <bytecodeTargetLevel target="21" />
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="&quot;-AoutRefMapFile=D:\BB Client\build\classes\java\main\simple-hud-utilities-refmap.json&quot; -AdefaultObfuscationEnv=named:intermediary -Aquiet=true &quot;-AoutMapFileNamedIntermediary=D:\BB Client\build\loom-cache\mixin-map-net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2.main.tiny&quot; -AinMapFileNamedIntermediary=C:\Users\SAJJAD\.gradle\caches\fabric-loom\1.20.6\net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2\mappings.tiny" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-AoutRefMapFile=D:\Helium\Helium\build\classes\java\main\Firepdx-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=D:\Helium\Helium\build\loom-cache\mixin-map-net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2.main.tiny -AinMapFileNamedIntermediary=C:\Users\SAJJAD\.gradle\caches\fabric-loom\1.20.6\net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2\mappings.tiny" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="BB_Client.test" options="&quot;-AoutRefMapFile=D:\BB Client\build\classes\java\test\test-simple-hud-utilities-refmap.json&quot; -AdefaultObfuscationEnv=named:intermediary -Aquiet=true &quot;-AoutMapFileNamedIntermediary=D:\BB Client\build\loom-cache\mixin-map-net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2.test.tiny&quot; -AinMapFileNamedIntermediary=C:\Users\SAJJAD\.gradle\caches\fabric-loom\1.20.6\net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2\mappings.tiny" />
+      <module name="Helium.test" options="-AoutRefMapFile=D:\Helium\Helium\build\classes\java\test\test-Firepdx-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=D:\Helium\Helium\build\loom-cache\mixin-map-net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2.test.tiny -AinMapFileNamedIntermediary=C:\Users\SAJJAD\.gradle\caches\fabric-loom\1.20.6\net.fabricmc.yarn.1_20_6.1.20.6+build.3-v2\mappings.tiny" />
     </option>
   </component>
 </project>

@@ -9,7 +9,7 @@ import net.minecraft.text.Text;
 
 public class ClientMenuScreen extends Screen {
     public ClientMenuScreen() {
-        super(Text.literal("Simple Utilities"));
+        super(Text.literal("BB Client"));
     }
 
     @Override

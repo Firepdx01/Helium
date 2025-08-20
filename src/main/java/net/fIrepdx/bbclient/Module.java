@@ -8,10 +8,16 @@ public enum Module {
     KEYSTROKES("Keystrokes"),
     FULLBRIGHT("FullBright"),
     TOGGLE_SPRINT("Toggle Sprint"),
-    CROSSHAIR_DOT("Crosshair Dot");
+    CROSSHAIR_DOT("Crosshair Dot"),
+    WATERMARK("Watermark"); // ✅ Added
 
     public final String display;
-    Module(String d) { this.display = d; }
 
-    public Text title() { return Text.literal(display); }
+    Module(String d) {
+        this.display = d;
+    }
+
+    public Text title() {
+        return Text.literal(display);
+    }
 }
