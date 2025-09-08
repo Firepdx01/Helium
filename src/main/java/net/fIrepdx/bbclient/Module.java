@@ -9,7 +9,12 @@ public enum Module {
     FULLBRIGHT("FullBright"),
     TOGGLE_SPRINT("Toggle Sprint"),
     CROSSHAIR_DOT("Crosshair Dot"),
-    WATERMARK("Watermark"); // ✅ Added
+    WATERMARK("Watermark"),
+    REACH("Reach"),
+    VELOCITY("Velocity"),
+    AUTO_CLICKER("Auto Clicker"),
+    NO_FALL("No Fall"),
+    SPEED("Speed");
 
     public final String display;
 

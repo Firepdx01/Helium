@@ -6,6 +6,8 @@
   "key.simple_utilities.toggle_hud.chat_message.on": "Toggled Simple HUD Utilities On",
   "key.simple_utilities.toggle_hud.chat_message.off": "Toggled Simple HUD Utilities Off",
   "category.simple_utilities": "Simple Utilities",
+  "category.bbclient": "BB Client",
+  "key.bbclient.opengui": "Open BB Client GUI",
   "text.direction.simple_utilities.west": "West",
   "text.direction.simple_utilities.east": "East",
   "text.direction.simple_utilities.south": "South",

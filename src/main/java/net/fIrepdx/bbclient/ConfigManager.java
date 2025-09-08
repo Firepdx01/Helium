@@ -47,6 +47,11 @@ public class ConfigManager {
         states.put(Module.WATERMARK, true);
         states.put(Module.TOGGLE_SPRINT, false);
         states.put(Module.CROSSHAIR_DOT, false);
+        states.put(Module.REACH, false);
+        states.put(Module.VELOCITY, false);
+        states.put(Module.AUTO_CLICKER, false);
+        states.put(Module.NO_FALL, false);
+        states.put(Module.SPEED, false);
     }
 
     public static boolean isEnabled(Module m) {

@@ -2,6 +2,7 @@ package net.fIrepdx.bbclient;
 
 import net.fIrepdx.bbclient.render.HudRenderer;
 import net.fIrepdx.bbclient.ui.ClientMenuScreen;
+import net.fIrepdx.bbclient.modules.*;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
@@ -24,6 +25,10 @@ public class SimpleUtilitiesMod implements ClientModInitializer {
                 client.setScreen(new ClientMenuScreen());
             }
 
+            // Update ghost client modules
+            AutoClicker.onTick();
+            Speed.onTick();
+            
             // Apply Fullbright toggle
             if (ConfigManager.isEnabled(Module.FULLBRIGHT)) {
                 if (client.options.getGamma().getValue() != 16.0) {
