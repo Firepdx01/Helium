@@ -12,9 +12,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ClientTickMixin {
     @Inject(method = "tick", at = @At("HEAD"))
     private void onClientTick(CallbackInfo ci) {
+        // Handle Right Shift key press to open GUI
         if (KeyBindings.openGui != null && KeyBindings.openGui.wasPressed()) {
             MinecraftClient client = MinecraftClient.getInstance();
-            client.setScreen(new ClientMenuScreen()); // ✅ open your GUI
+            if (client.currentScreen == null) { // Only open if no other screen is open
+                client.setScreen(new ClientMenuScreen());
+            }
         }
     }
 }

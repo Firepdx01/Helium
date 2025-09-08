@@ -15,13 +15,13 @@ public class SimpleUtilitiesMod implements ClientModInitializer {
     public void onInitializeClient() {
         // Initialize configs, keybinds, and HUD renderer
         ConfigManager.init();
-        KeyBindings.init();  // ✅ fixed
-        HudRenderer.init();  // safe to keep (even if empty right now)
+        KeyBindings.init();
+        HudRenderer.init();
 
         // Handle key presses and features each client tick
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            // Open GUI when key is pressed
-            while (KeyBindings.openGui.wasPressed()) {
+            // Open GUI when Right Shift key is pressed
+            if (KeyBindings.openGui != null && KeyBindings.openGui.wasPressed()) {
                 client.setScreen(new ClientMenuScreen());
             }
 

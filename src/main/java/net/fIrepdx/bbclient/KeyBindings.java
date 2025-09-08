@@ -12,7 +12,7 @@ public class KeyBindings {
         openGui = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.bbclient.opengui",
                 InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_RIGHT_SHIFT, // Right Shift default
+                GLFW.GLFW_KEY_RIGHT_SHIFT, // Right Shift key
                 "category.bbclient"
         ));
     }

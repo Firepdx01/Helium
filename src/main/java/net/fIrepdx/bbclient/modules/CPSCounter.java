@@ -9,9 +9,13 @@ import org.lwjgl.glfw.GLFW;
 public class CPSCounter {
     private static final MinecraftClient mc = MinecraftClient.getInstance();
 
-    private static int leftClicks = 0, rightClicks = 0;
-    private static int lCps = 0, rCps = 0;
+    private static int leftClicks = 0;
+    private static int rightClicks = 0;
+    private static int lCps = 0;
+    private static int rCps = 0;
     private static long lastTime = System.currentTimeMillis();
+    private static boolean leftPressed = false;
+    private static boolean rightPressed = false;
 
     public static void onTick() {
         if (!ConfigManager.isEnabled(Module.CPS)) return;
@@ -25,12 +29,19 @@ public class CPSCounter {
             lastTime = now;
         }
 
-        if (GLFW.glfwGetMouseButton(mc.getWindow().getHandle(), GLFW.GLFW_MOUSE_BUTTON_1) == GLFW.GLFW_PRESS) {
-            leftClicks++;
+        // Track left mouse button clicks
+        boolean currentLeftPressed = GLFW.glfwGetMouseButton(mc.getWindow().getHandle(), GLFW.GLFW_MOUSE_BUTTON_1) == GLFW.GLFW_PRESS;
+        if (currentLeftPressed && !leftPressed) {
+            leftClicks++; // Only count when button is first pressed
         }
-        if (GLFW.glfwGetMouseButton(mc.getWindow().getHandle(), GLFW.GLFW_MOUSE_BUTTON_2) == GLFW.GLFW_PRESS) {
-            rightClicks++;
+        leftPressed = currentLeftPressed;
+
+        // Track right mouse button clicks
+        boolean currentRightPressed = GLFW.glfwGetMouseButton(mc.getWindow().getHandle(), GLFW.GLFW_MOUSE_BUTTON_2) == GLFW.GLFW_PRESS;
+        if (currentRightPressed && !rightPressed) {
+            rightClicks++; // Only count when button is first pressed
         }
+        rightPressed = currentRightPressed;
     }
 
     public static void render(DrawContext context) {
